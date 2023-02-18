@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Sai Varshith | SRE@Honeywell</title>
+</head>
+
+<script defer>
+    var current_active = "nav_home"
+
+    window.onload = function () {
+        document.getElementById(current_active).classList.add('active-nav')
+
+        var observer = new IntersectionObserver(function (entries) {
+            // isIntersecting is true when element and viewport are overlapping
+            // isIntersecting is false when element and viewport don't overlap
+            if (entries[0].isIntersecting === true)
+                console.log("Called for :")
+            console.log(entries[0].target.id)
+            update_nav(entries[0].target.id)
+        }, { threshold: [1] });
+
+
+        observer.observe(document.getElementById("nav_home"));
+        observer.observe(document.getElementById("nav_research"));
+        observer.observe(document.getElementById("nav_academics"));
+        observer.observe(document.getElementById("nav_career"));
+        observer.observe(document.getElementById("nav_skills"));
+        observer.observe(document.getElementById("nav_certifications"));
+    }
+
+    function update_nav(nav_id) {
+        // Deactivate current active nav item and activate new nav item
+        document.getElementById(current_active).classList.remove('active-nav')
+        current_active = nav_id
+        document.getElementById(current_active).classList.add('active-nav')
+    }
+
+</script>
+
+<body>
+    <div id="navbar">
+        <a href="#home" id="nav_home" onclick="update_nav('nav_home')">HOME</a>
+        <a href="#career" id="nav_career" onclick="update_nav('nav_career')">CAREER</a>
+        <a href="#skills" id="nav_skills" onclick="update_nav('nav_skills')">SKILLS</a>
+        <a href="#certifications" id="nav_certifications" onclick="update_nav('nav_certifications')">CERTIFICATIONS</a>
+        <a href="#research" id="nav_research" onclick="update_nav('nav_research')">RESEARCH</a>
+        <a href="#academics" id="nav_academics" onclick="update_nav('nav_academics')">ACADEMICS</a>
+    </div>
+
+    <div class="container">
+        <div id="home" class="section">
+            <h1 style="font-size: 48px; font-weight: 100;">SAI <span style="color: green">VARSHITH</span></h1>
+            <div style="line-height: 1.5;">Site Reliability Engineer @ Honeywell
+                <br>B.Tech + M.Tech (Integrated Dual Degree) in Computer Science and Engineering
+                <br>Bangalore, Karnataka
+                <br><a target="blank" href="mailto:hosvarshith@gmail.com">hosvarshith@gmail.com</a>
+                | <a target="blank" href="https://www.github.com/saivarshith2000">Github</a>
+                | <a target="blank" href="https://www.linkedin.com/in/sai-varshith-hariyala-a21422192">Linkedin</a>
+                | <a class="external_link" target="_blank" href="./sai_varshith_resume.pdf">Resume</a>
+            </div>
+            <span class="status">* Looking for oppurtunities in Software Development</span>
+        </div>
+
+        <div id="career" class="section">
+            <h1>CAREER</h1>
+
+            <div class="career-entry">
+                <div class="career-entry-header">
+                    <div class="career-entry-title">Reliability Engineer - II</div>
+                    <div class="career-entry-date">July 2022 - Present</div>
+                </div>
+                <div class="career-entry-details">Honeywell Technology Solutions Lab Pvt. Ltd</div>
+                <div class="career-entry-details">Bangalore, India</div>
+                <ul class="career-entry-description">
+                    <li>SRE for Honeywell Forge Connect and Niagara Cloud Services</li>
+                    <li>Developed a full-stack web application (React, Node, .NET, Postgres) for monitoring and analyzing trends in end-to-end data flow of Honeywell
+                        Forge IoT devices</li>
+                    <li>Creation and management cloud infrastructure on Azure</li>
+                    <li>Infrastructure automation (KONG, Azure) using IaaS pipelines written in terraform
+                    </li>
+                    <li>Built monitoring dashboards in Grafana using various data sources (Prometheus, Postgres, Azure
+                        Monitor, ELK)</li>
+                    <li>Initial incident response, triaging, resolution and RCA for Honeywell Forge Connect and Niagara Cloud Services</li>
+                    <li>Manage deployments for Honeywell Forge Components and Niagara Cloud
+                        Services</li>
+                </ul>
+            </div>
+            <div class="career-entry">
+                <div class="career-entry-header">
+                    <div class="career-entry-title">Site Reliability Engineer (SRE) Internship
+                    </div>
+                    <div class="career-entry-date">May 2021 - July 2021</div>
+                </div>
+                <div class="career-entry-details">Honeywell Technology Solutions Lab Pvt. Ltd</div>
+                <div class="career-entry-details">Work From Home</div>
+                <ul class="career-entry-description">
+                    <li>Worked closely with a team of interns and engineers to enhance Test Engineering Platform</li>
+                    <li>Integrated the platform with Microsoft Teams via Channel notifications and an interactive Chat
+                        Bot</li>
+                    <li>Fixed frontend/backend issues to improve user experience</li>
+                    <li>Learned and implemented Authentication and Role based Authorization using Azure AD</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="skills" style="line-height: 1.5" class="section">
+            <h1>SKILLS</h1>
+            <div class="skill-header">Languages</div>
+            C#, Javascript, Typescript, Python, C, C++, Bash<br>
+            <div class="skill-header">Technologies</div>
+            Azure Cloud, Openshift (ARO), Docker, Terraform, BitBucket, Bamboo, Octopus Deploy
+            <div class="skill-header">Databases</div>
+            PostgreSQL, MySQL, MongoDB
+            <div class="skill-header">Frameworks</div>
+            React, Django, ExpressJS, ReactNative, Flask
+        </div>
+
+
+        <div id="certification" class="section">
+            <h1>CERTIFICATIONS</h1>
+            <ul>
+                <li>Microsoft Certified: Azure Fundamentals - <a target="_blank" href="https://www.credly.com/badges/b1ce95ef-410e-4cec-bd58-6889f04b2b50/linked_in_profile">AZ-900</a></li>
+                <li>Microsoft Certified: Azure Data Fundamentals - <a target="_blank" href="https://www.credly.com/badges/1d7c84bf-b14d-49a3-8d49-31c1344b717f/linked_in_profile">DP-900</a></li>
+            </ul>
+        </div>
+
+        <div id="research" class="section">
+            <h1>RESEARCH</h1>
+            <div>Currently pursuing research in the field of computer security and access control under the supervision
+                of Dr. Shamik Sural. We are working on designing and developing advanced access control models in the
+                Linux Kernel.
+                My areas of interest include application security, web, desktop and mobile application development.
+            </div>
+            <ul>
+                <li>Published a short paper on "Enabling Attirbute-Based Access Control (ABAC) in Linux Kernel" at the
+                    <a class="external_link" target="_blank"
+                        href="https://asiaccs2022.conferenceservice.jp/accepted-papers/poster/">ASIA
+                        CCS 2022 Conference</a> organized by <a class="external_link" target="_blank"
+                        href="https://www.acm.org/">ACM</a>.
+                </li>
+            </ul>
+        </div>
+
+        <div id="academics" class="section">
+            <h1>ACADEMICS</h1>
+            <div class="career-entry">
+                <div class="career-entry-header">
+                    <div class="career-entry-title">B.Tech + M.Tech (Integrated Dual Degree) in Computer Science and
+                        Engineering</div>
+                </div>
+                <div class="career-entry-details">June 2017 - June 2022</div>
+                <div class="career-entry-details">Indian Institute of Technology Kharapur</div>
+                <div class="career-entry-details">Kharagpur, India</div>
+                <div class="career-entry-details"><b>CGPA: 8.54</b></div>
+                <ul class="career-entry-description">
+                    <li>Programming and Data-Structures</li>
+                    <li>Algorithms</li>
+                    <li>Computer Networks</li>
+                    <li>Compiler Design</li>
+                    <li>High Performance Computer Architecture</li>
+                    <li>Advanced Database Management</li>
+                    <li>Distributed Systems</li>
+                    <li>Software Development Processes and Lifecycles</li>
+                    <li>Novel Research on security models in Linux Kernel as part of Masters Project</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <small>Design: saivarshith2000 | Hosting: Github Pages | &copy;2023 Sai Varshith<small>
+        </footer>
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+body {
+    margin: 0px;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Roboto Mono', monospace;
+    /* font-family: 'Courier Prime', monospace; */
+    /* font-family: 'JetBrains Mono', monospace; */
+    line-height: 1.3;
+    font-size: 16px;
+    font-weight: 100;
+    background-color: #efefef;
+    color: #111;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+}
+
+
+html {
+scroll-behavior: smooth;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.external_link {
+    text-decoration: underline;
+    color: blue;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 15%;
+    min-width: 250px;
+    background-color: darkgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        display: none;
+    }
+}
+
+#navbar a {
+    font-size: large;
+    color: #aaa;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    width: 100%;
+}
+
+#navbar a:hover {
+    transition: 0.5s;
+    font-weight: bold;
+    color: white;
+}
+
+.active-nav {
+    font-weight: bold;
+    color: white !important
+}
+
+li {
+    list-style: square;
+    padding-left: none
+}
+
+#links {
+    font-size: 32px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 128px;
+}
+
+#links * {
+    color: darkgreen;
+}
+
+#links *:hover {
+    color: darkgreen;
+}
+
+.container {
+    margin: auto;
+    margin-bottom: 5px;
+    padding: auto;
+    padding-left: 250px;
+    width: 60%;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding-left: 0
+    }
+}
+
+.section {
+    padding: auto;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+    .section {
+        display: block;
+        height: auto;
+    }
+}
+
+.career-entry {
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.career-entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .career-entry-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.career-entry-title {
+    color: darkgreen;
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.career-entry-date {
+    color: #444;
+    font-weight: bold;
+}
+
+.career-entry-details {
+    margin-bottom: 2px;
+}
+
+.career-entry-description {
+    color: #555
+}
+
+.skill-header {
+    font-weight: bold;
+    color: darkgreen;
+    margin-top: 10px;
+}
+
+footer {
+    color: #666;
+    bottom: 0 !important;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+    padding: auto;
+}
+
+.dull_link {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.status {
+    color: darkgreen;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 4px
+
+}
